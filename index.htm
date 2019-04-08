@@ -128,31 +128,31 @@
         <h3 class="about__title">Коротко о нас:</h3>
         <ul class="about__list">
           <li class="about__list-item">
-            <span class="about__picture about__picture--1"></span>
+            <span class="about__picture about__picture--flower"></span>
             <p class="about__text">Экологически
               чистые материалы</p>
           </li>
           <li class="about__list-item">
-            <span class="about__picture about__picture--2"></span>
+            <span class="about__picture about__picture--money"></span>
             <p class="about__text">Скандинавский стиль
               по российской цене</p>
           </li>
           <li class="about__list-item">
-            <span class="about__picture about__picture--3"></span>
+            <span class="about__picture about__picture--heart"></span>
             <p class="about__text">Увеличивает лайки
               на фотографиях</p>
           </li>
           <li class="about__list-item">
-            <span class="about__picture about__picture--4"></span>
+            <span class="about__picture about__picture--tread"></span>
             <p class="about__text">Связано вручную с
               любовью и умилением</p>
           </li>
           <li class="about__list-item">
-            <span class="about__picture about__picture--5"></span>
+            <span class="about__picture about__picture--rocket"></span>
             <p class="about__text">Поддержка отечественного производителя</p>
           </li>
           <li class="about__list-item">
-            <span class="about__picture about__picture--6"></span>
+            <span class="about__picture about__picture--gift"></span>
             <p class="about__text">Поставляется в
               подарочной упаковке</p>
           </li>
@@ -161,20 +161,24 @@
 
       <section class="reviews">
         <h3 class="reviews__title">Отзывы</h3>
-        <div class="reviews__list"></div>
-        <blockquote class="reviews__item">
-          <p class="reviews__text">Я молодая мама, но всё равно фотографии не
-            набирали и близко такого количества лайков, как у популярных
-            инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
-            и мои фотографии сразу стали более стильными, а также набирают
-            больше лайков!</p>
-          <cite class="reviews__autor-name">
-            Анастасия Красильникова
-            <span class="reviews__autor-adress">@misssssiskras</span>
-          </cite>
-        </blockquote>
-        <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-        <button class="reviews__next" type="button">Следующий отзыв</button>
+        <div class="reviews__list">
+          <blockquote class="reviews__item">
+            <p class="reviews__text">Я молодая мама, но всё равно фотографии не
+              набирали и близко такого количества лайков, как у популярных
+              инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в
+              Мишке,
+              и мои фотографии сразу стали более стильными, а также набирают
+              больше лайков!</p>
+            <cite class="reviews__autor-name">
+              Анастасия Красильникова
+              <span class="reviews__autor-adress">@misssssiskras</span>
+            </cite>
+          </blockquote>
+        </div>
+        <button class="reviews__button reviews__button--prev" type="button">Предыдущий
+          отзыв</button>
+        <button class="reviews__button reviews__button--next" type="button">Следующий
+          отзыв</button>
         <a href="#" class="reviews__write button">Написать</a>
       </section>
 
@@ -197,9 +201,17 @@
               д. 19/8, офис 101</td>
           </tr>
         </table>
-        <table class="contacts__picture">
-          <img src="http://placehold.it/150x100" alt="Карта" width="322" height="457">
-        </table>
+
+        <!-- <div class="contacts__map-wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1554286769978!5m2!1sru!2sru"
+            frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div> -->
+
+        <p class="contacts__picture">
+          <img src="http://placehold.it/150x100" alt="Карта" width="322"
+            height="457">
+        </p>
         <a href="#" class="contacts__write button">Напишите нам</a>
       </section>
     </main>
@@ -209,7 +221,8 @@
       <div class="page-footer__logo">
         <p class="page-footer__logo-picture">
           <a href="#">
-            <img src="http://placehold.it/150x100" alt="Логотип магазина" width="102" height="34">
+            <img src="http://placehold.it/150x100" alt="Логотип магазина"
+              width="102" height="34">
           </a>
         </p>
       </div>
@@ -217,16 +230,19 @@
       <div class="page-footer__socials social">
         <ul class="social__list">
           <li class="social_item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/">
-            Мы в Инстаграме</a>
+            <a class="social__link social__link--instagram"
+              href="https://www.instagram.com/">
+              Мы в Инстаграме</a>
           </li>
           <li class="social_item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/">
-            Мы в Фейсбуке</a>
+            <a class="social__link social__link--facebook"
+              href="https://www.facebook.com/">
+              Мы в Фейсбуке</a>
           </li>
           <li class="social_item">
-            <a class="social__link social__link--twitter" href="https://twitter.com/">
-            Мы в Твиттере</a>
+            <a class="social__link social__link--twitter"
+              href="https://twitter.com/">
+              Мы в Твиттере</a>
           </li>
         </ul>
       </div>

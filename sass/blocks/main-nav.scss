@@ -1,0 +1,25 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
+.main-nav {
+  // position: relative;
+  // display: none;
+  min-height: 316px;
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+
+.main-nav__list {
+  @include reset-list();
+}
+
+.main-nav__close-button {
+  @include reset-button-style();
+  @include set-abs-size-tl(29px, 30px, 21px, 20px);
+  background-image: url("/img/icon-menu-close.svg");
+}
+
+

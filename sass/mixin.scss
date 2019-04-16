@@ -1,0 +1,54 @@
+@mixin reset-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin reset-padding() {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin reset-link() {
+  text-decoration: none;
+  color: #000000;
+}
+
+@mixin reset-button-style {
+  font-size: 0;
+  background-color: transparent;
+  border: none;
+
+}
+
+@mixin set-abs-size-tl ($top, $left, $width, $height) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+}
+
+@mixin set-abs-size-tr ($top, $right, $width, $height) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  width: $width;
+  height: $height;
+}
+
+@mixin font-regular($fs, $lh) {
+  font-family: "Open Sans Regular", "Arial", sans-serif;
+  font-size: $fs;
+  line-height: $lh;
+  color: #000000;
+}
+
+@mixin font-bold($fs, $lh) {
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: $fs;
+  line-height: $lh;
+  color: #000000;
+}
+
+

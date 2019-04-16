@@ -1,0 +1,18 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
+.page-header {
+  position: relative;
+
+}
+
+.page-header__logo {
+  display: block;
+  height: 79px;
+  width: 320px;
+  padding: 0 30px;
+  padding-top: 20px;
+  text-align: center;
+  border-top: 1px solid #ececec;
+  box-sizing: border-box;
+}

@@ -1,0 +1,90 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
+@font-face {
+  font-family: "Open Sans Regular";
+  src: local("Open Sans Regular"),
+    url("/fonts/opensans.woff2") format("woff2"),
+    url("/fonts/opensans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  src: local("Open Sans Bold"),
+    url("/fonts/opensansbold.woff2") format("woff2"),
+    url("/fonts/opensansbold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  min-width: 320px;
+  min-height: 3932px;
+  margin: 0 auto;
+  @include font-regular(17px, 30px);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-image: url("/img/mishka-index-mobile_menu.jpg");
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+
+// @media (min-width: $tablet-width) {
+//   body {
+//     background-image: url("/img/mishka-index-tablet.jpg");
+//   }
+// }
+
+// @media (min-width: $desktop-width) {
+//   body {
+//     background-image: url("/img/mishka-index-desktop.jpg");
+//   }
+// }
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+  // padding: 0 30px;
+  //временно
+  opacity: 0.3;
+
+  //временно
+
+  // outline: 3px solid black;
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    width: $desktop-width;
+  }
+}
+
+
+
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

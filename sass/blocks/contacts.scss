@@ -1,0 +1,62 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
+.contacts {
+  @include reset-padding();
+  // padding: 0 30px;
+}
+
+.contacts__title {
+  @include reset-padding();
+  @include font-bold(18px, 30px);
+  padding: 0 30px;
+  padding-top: 30px;
+  margin-bottom: 25px;
+}
+
+.contacts__table {
+  @include reset-padding();
+  padding: 0 30px;
+  margin-bottom: 35px;
+}
+
+.contacts__table tr {
+  height: 56px;
+
+}
+
+.contacts__param {
+  @include reset-padding();
+  @include font-regular(15px, 30px);
+  width: 75px;
+  vertical-align: top;
+}
+
+.contacts__value {
+  @include reset-padding();
+  @include font-regular(15px, 30px);
+  vertical-align: top;
+
+  &--mail {
+    display: inline-block;
+    border-bottom: 1px solid #62d1ba;
+  }
+}
+
+.contacts__picture {
+  @include reset-padding();
+  width: 320px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.contacts__picture img {
+  @include reset-padding();
+}
+
+.contacts__write {
+  @include font-regular(18px, 20px);
+  margin: 0 auto;
+  margin-bottom: 37px;
+  text-align: center;
+}

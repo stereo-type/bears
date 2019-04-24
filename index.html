@@ -38,7 +38,8 @@
                 <a class="site-list__item--search" href="#">Поиск по сайту</a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__item--basket" href="#">Корзина: <span class="basket-fill">
+                <a class="site-list__item--basket" href="#">Корзина: <span
+                    class="basket-fill">
                     пока пуста</span></a>
               </li>
             </ul>
@@ -121,7 +122,7 @@
               </tr>
             </table>
             <p class="features__picture">
-              <img src="http://placehold.it/150x100" alt="Вязанные корзинки"
+              <img src="/img/triple-set-mobile@1x.jpg" alt="Вязанные корзинки"
                 width="260" height="315">
             </p>
             <span class="features__price">Цена: 990 руб.</span>
@@ -134,31 +135,32 @@
           <ul class="about__list">
             <li class="about__list-item">
               <span class="about__picture about__picture--flower"></span>
-              <p class="about__text">Экологически
+              <p class="about__text">Экологически <br>
                 чистые материалы</p>
             </li>
             <li class="about__list-item">
               <span class="about__picture about__picture--money"></span>
-              <p class="about__text">Скандинавский стиль
+              <p class="about__text">Скандинавский стиль <br>
                 по российской цене</p>
             </li>
             <li class="about__list-item">
               <span class="about__picture about__picture--heart"></span>
-              <p class="about__text">Увеличивает лайки
+              <p class="about__text">Увеличивает лайки <br>
                 на фотографиях</p>
             </li>
             <li class="about__list-item">
-              <span class="about__picture about__picture--tread"></span>
-              <p class="about__text">Связано вручную с
+              <span class="about__picture about__picture--ball"></span>
+              <p class="about__text">Связано вручную с <br>
                 любовью и умилением</p>
             </li>
             <li class="about__list-item">
               <span class="about__picture about__picture--rocket"></span>
-              <p class="about__text">Поддержка отечественного производителя</p>
+              <p class="about__text">Поддержка отечественного <br>
+                производителя</p>
             </li>
             <li class="about__list-item">
               <span class="about__picture about__picture--gift"></span>
-              <p class="about__text">Поставляется в
+              <p class="about__text">Поставляется в <br>
                 подарочной упаковке</p>
             </li>
           </ul>
@@ -181,10 +183,12 @@
               </cite>
             </blockquote>
           </div>
-          <button class="reviews__button reviews__button--prev" type="button">Предыдущий
-            отзыв</button>
-          <button class="reviews__button reviews__button--next" type="button">Следующий
-            отзыв</button>
+          <div class="reviews__button-wrapper">
+            <button class="reviews__button reviews__button--prev" type="button">Предыдущий
+              отзыв</button>
+            <button class="reviews__button reviews__button--next" type="button">Следующий
+              отзыв</button>
+          </div>
           <a href="#" class="reviews__write button">Написать</a>
         </section>
 
@@ -195,7 +199,7 @@
               <td class="contacts__param">
                 e-mail:
               </td>
-              <td class="contacts__value">
+              <td class="contacts__value contacts__value--mail">
                 <a href="mailto:info@mimimishkashop.ru" class="contacts__mail">
                   info@mimimishkashop.ru</a>
               </td>
@@ -214,7 +218,7 @@
                                         frameborder="0" style="border:0" allowfullscreen></iframe>
                                       </div> -->
           <p class="contacts__picture">
-            <img src="http://placehold.it/150x100" alt="Карта" width="322"
+            <img src="/img/map-mobile@1x.jpg" alt="Карта" width="322S"
               height="457">
           </p>
           <a href="#" class="contacts__write button">Напишите нам</a>
@@ -234,17 +238,17 @@
 
         <div class="page-footer__socials social">
           <ul class="social__list">
-            <li class="social_item">
+            <li class="social__item">
               <a class="social__link social__link--instagram"
                 href="https://www.instagram.com/">
                 Мы в Инстаграме</a>
             </li>
-            <li class="social_item">
+            <li class="social__item">
               <a class="social__link social__link--facebook"
                 href="https://www.facebook.com/">
                 Мы в Фейсбуке</a>
             </li>
-            <li class="social_item">
+            <li class="social__item">
               <a class="social__link social__link--twitter"
                 href="https://twitter.com/">
                 Мы в Твиттере</a>
@@ -253,8 +257,14 @@
         </div>
 
         <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано:</b>
-          <a href="https://htmlacademy.ru/">HTML Academy</a>
+          <p class="copyright__text">
+            <span class="copyright__span">Разработано</span>
+            <a class="copyright__link" href="https://htmlacademy.ru/">HTML
+              Academy
+              <img class="copyright__picture" src="../img/htmlacademy.svg"
+                width="27" height="34" alt="HTML Academy">
+            </a>
+          </p>
         </div>
 
       </footer>

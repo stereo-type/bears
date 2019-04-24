@@ -1,0 +1,23 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
+.page-footer {
+  background-color: #f1f1f1;
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+.page-footer__socials {
+  margin: 0 30px;
+  padding:  0 62px 0 57px;
+  padding-top: 23px;
+}
+
+.page-footer__copyright {
+  margin: 0 30px;
+  // padding:  0 62px 0 57px;
+  padding-top: 20px;
+}
+

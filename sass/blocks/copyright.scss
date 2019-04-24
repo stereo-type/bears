@@ -1,0 +1,39 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
+.copyright {
+  @include font-bold (19px, 18px);
+  height: 79px;
+
+}
+
+.copyright__text {
+  @include reset-padding();
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 182px;
+  height: 31px;
+  margin: 0 auto;
+
+}
+
+.copyright__span {
+
+}
+
+.copyright__link {
+  font-size: 0;
+  margin-left: auto;
+  height: 34px;
+
+}
+
+.copyright__img {
+  width: 27px;
+  height: 34px;
+
+
+
+}

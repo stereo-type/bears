@@ -8,15 +8,17 @@
     url("/fonts/opensans.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Open Sans Bold";
   src: local("Open Sans Bold"),
-    url("/fonts/opensansbold.woff2") format("woff2"),
-    url("/fonts/opensansbold.woff") format("woff");
+  url("/fonts/opensansbold.woff2") format("woff2"),
+  url("/fonts/opensansbold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 body {
@@ -26,7 +28,7 @@ body {
   @include font-regular(17px, 30px);
   background-repeat: no-repeat;
   background-position: 50% 0;
-  background-image: url("/img/mishka-index-mobile_menu.jpg");
+  // background-image: url("/img/mishka-index-desktop.jpg");
 }
 
 a {
@@ -34,30 +36,11 @@ a {
   color: inherit;
 }
 
-
-
-// @media (min-width: $tablet-width) {
-//   body {
-//     background-image: url("/img/mishka-index-tablet.jpg");
-//   }
-// }
-
-// @media (min-width: $desktop-width) {
-//   body {
-//     background-image: url("/img/mishka-index-desktop.jpg");
-//   }
-// }
-
 .container {
   width: 320px;
   margin: 0 auto;
-  // padding: 0 30px;
-  //временно
-  opacity: 0.3;
-
-  //временно
-
-  // outline: 3px solid black;
+  // временно
+  // opacity: 0.5;
 }
 
 @media (min-width: $tablet-width) {
@@ -102,4 +85,12 @@ input[type="radio"].visually-hidden {
   background-color: transparent;
   border: 2px solid #444444;
   box-sizing: border-box;
+  &:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
+  &:active {
+    color: rgba($color: #ffffff, $alpha: 0.3);
+  }
+  
 }

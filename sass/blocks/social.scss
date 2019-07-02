@@ -24,13 +24,32 @@
 .social__link {
   display: block;
   font-size: 0px;
-  background-image: url("../img/icon-insta.svg");
-  background-position: center bottom;
-  background-repeat: no-repeat;
+  &--instagram {
+    margin-top: 5px;
+    margin-left: 2px;
+  }
   &--facebook {
-    background-image: url("../img/icon-fb.svg");
+    margin-left: 5px;
   }
   &--twitter {
-    background-image: url("../img/icon-twitter.svg");
+    margin-top: 5px;
+  }
+}
+
+// .social__link {
+//   &:hover {
+//     fill: #46c1ae;
+//   }
+//   &:active {
+//     opacity: 0.3;
+//   }
+// }
+
+.page-footer__picture {
+  &:hover {
+    fill: #46c1ae;
+  }
+  &:active {
+    opacity: 0.3;
   }
 }

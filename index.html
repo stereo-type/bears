@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Магазин вязаных игрушек «Мишка»</title>
   </head>
   <body>
@@ -15,36 +17,56 @@
       <header class="page-header">
 
         <a class="page-header__logo">
-          <img src="./img/logo-mobile.svg"
-            width="86" height="35"
-            alt="Магазин вязаных игрушек «Мишка»">
+          <picture class="page-header__img">
+            <source media="(min-width: 1250px)"
+              srcset="../img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="/img/logo-tablet.svg">
+            <img src="../img/logo-mobile.svg" alt="Магазин вязаных игрушек
+              «Мишка»">
+          </picture>
         </a>
 
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
 
-          <button class="main-nav__toggle" type="button">
-            Открыть меню
+          <button class="main-nav__toggle" type="button"><span
+              class="visually-hidden">
+              Открыть меню
+            </span>
           </button>
 
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
               <li class="site-list__item">
-                <a href="catalog.html">Каталог товаров</a>
+                <a href="catalog.html">
+                  Каталог товаров</a>
               </li>
               <li class="site-list__item">
                 <a href="form.html">Вязание на заказ</a>
               </li>
-              <li class="site-list__item">
-                <a class="site-list__item--search" href="#">Поиск по сайту</a>
+              <li class="site-list__item site-list__item--search">
+                <a class="site-list__link site-list__link--search" href="#">
+                  <svg class="site-list__link-picture
+                    site-list__link-picture--basket" width="18" height="18"
+                    role="img">
+                    <use xlink:href="#icon-search">
+                    </use>
+                  </svg>
+                  Поиск по сайту</a>
               </li>
-              <li class="site-list__item">
-                <a class="site-list__item--basket" href="#">Корзина: <span
-                    class="basket-fill">
+              <li class="site-list__item site-list__item--basket">
+                <a class="site-list__link site-list__link--basket" href="#">
+                  <svg class="site-list__link-picture
+                    site-list__link-picture--basket" width="21" height="18"
+                    role="img">
+                    <use xlink:href="#icon-cart">
+                    </use>
+                  </svg>
+                  Корзина: <span class="site-list__basket-fill">
                     пока пуста</span></a>
               </li>
             </ul>
-            <button class="main-nav__close-button" type="button">
-              Закрыть</button>
+            <!-- <button class="main-nav__close-button" type="button">
+              Закрыть</button> -->
           </div>
         </nav>
 
@@ -66,8 +88,7 @@
             Милые штуки <br> ручной <br> работы для дома</h1>
           <figure class="second-nav__picture">
             <a class="second-nav__img">
-              <img src="img/hero-mobile@1x.jpg"
-                width="575" height="373"
+              <img src="img/hero-mobile@1x.jpg" width="575" height="373"
                 alt="Фото работ">
             </a>
           </figure>
@@ -174,7 +195,7 @@
                 не
                 набирали и близко такого количества лайков, как у популярных
                 инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в
-                Мишке,
+                Мишке, <br>
                 и мои фотографии сразу стали более стильными, а также набирают
                 больше лайков!</p>
               <cite class="reviews__autor-name">
@@ -196,9 +217,7 @@
           <h3 class="contacts__title">Контакты</h3>
           <table class="contacts__table">
             <tr>
-              <td class="contacts__param">
-                e-mail:
-              </td>
+              <td class="contacts__param">e-mail:</td>
               <td class="contacts__value contacts__value--mail">
                 <a href="mailto:info@mimimishkashop.ru" class="contacts__mail">
                   info@mimimishkashop.ru</a>
@@ -218,7 +237,7 @@
                                         frameborder="0" style="border:0" allowfullscreen></iframe>
                                       </div> -->
           <p class="contacts__picture">
-            <img src="/img/map-mobile@1x.jpg" alt="Карта" width="322S"
+            <img src="/img/map-mobile@1x.jpg" alt="Карта" width="322"
               height="457">
           </p>
           <a href="#" class="contacts__write button">Напишите нам</a>
@@ -228,47 +247,79 @@
       <footer class="page-footer">
 
         <div class="page-footer__logo">
-          <p class="page-footer__logo-picture">
-            <a href="#">
-              <img src="http://placehold.it/150x100" alt="Логотип магазина"
-                width="102" height="34">
-            </a>
-          </p>
+
+          <a>
+            <svg class="page-footer__logo-picture" width="102" height="34">
+              <use xlink:href="#logo-footer">
+              </use>
+            </svg>
+
+          </a>
+
         </div>
 
         <div class="page-footer__socials social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--instagram"
-                href="https://www.instagram.com/">
-                Мы в Инстаграме</a>
+                href="https://www.instagram.com/" aria-label="Переход в
+                Инстаграм">
+                Мы в Инстаграме
+                <svg class="page-footer__picture
+                  page-footer__picture--instagram" width="21" height="21"
+                  role="img">
+                  <use xlink:href="#icon-insta">
+                  </use>
+                </svg></a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook"
-                href="https://www.facebook.com/">
-                Мы в Фейсбуке</a>
+                href="https://www.facebook.com/" aria-label="Переход на
+                Фейсбук">
+                Мы в Фейсбуке
+                <svg class="page-footer__picture page-footer__picture--facebook"
+                  width="15" height="27" role="img">
+                  <use xlink:href="#icon-fb">
+
+                  </use>
+                </svg></a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--twitter"
-                href="https://twitter.com/">
-                Мы в Твиттере</a>
+                href="https://twitter.com/" aria-label="Переход в Твиттер">
+                Мы в Твиттере
+                <svg class="page-footer__picture page-footer__picture--twitter"
+                  width="23" height="20" role="img">
+                  <use xlink:href="#icon-twitter">
+                  </use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
 
         <div class="page-footer__copyright copyright">
           <p class="copyright__text">
-            <span class="copyright__span">Разработано</span>
-            <a class="copyright__link" href="https://htmlacademy.ru/">HTML
+            <a class="copyright__link" href="https://htmlacademy.ru/"
+              aria-label="Переход на сайт HTML Academy">HTML
               Academy
-              <img class="copyright__picture" src="../img/htmlacademy.svg"
-                width="27" height="34" alt="HTML Academy">
+              <span class="copyright__span">Разработано</span>
+              <svg class="page-footer__picture page-footer__picture--copyright"
+                width="41" height="51" role="img">
+                <use xlink:href="#htmlacademy">
+                </use>
+              </svg>
+              <!-- <img class="copyright__picture" src="../img/htmlacademy.svg"
+                width="27" height="34" alt="HTML Academy"> -->
             </a>
           </p>
         </div>
-
       </footer>
-
-    </div>
-  </body>
-</html>
+      <div style="display: none">
+        <include src="build/img/sprite.svg">
+        </div>
+      </div>
+      <script src="/js/js.min.js">
+    </script>
+    </body>
+  </html>

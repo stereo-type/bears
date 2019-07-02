@@ -1,0 +1,140 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
+
+.page-catalog__catalog-list {
+  @include reset-list();
+  @include reset-padding();
+  padding: 30px;
+  display: grid;
+  grid-gap: 30px;
+}
+
+.page-catalog__link {
+  display: flex;
+  flex-direction: column;
+  &:hover .page-catalog__wrapper{
+    box-shadow: 0 5px 10px 1px #e9e9e9;
+  }
+  &:active .page-catalog__wrapper{
+    box-shadow: 0 2px 5px 0px #e8e8e8;
+  }
+  &:hover .page-catalog__icon-cart {
+    fill: #63d1bb;
+  }
+  &:active .page-catalog__icon-cart {
+    fill: rgba($color: #63d1bb, $alpha: 0.3);
+  }
+  &:hover .page-catalog__title {
+    opacity: 0.6;
+  }
+  &:active .page-catalog__title {
+    opacity: 0.3;
+  }
+}
+
+.page-catalog__picture{
+  width: 260px;
+  height: 195px;
+}
+
+.page-catalog__wrapper {
+  border: 1px solid #ededed;
+  box-sizing: border-box;
+  min-height: 179px;
+}
+
+.page-catalog__title {
+  @include reset-padding();
+  @include font-bold(17px, 24px);
+  padding: 0 27px;
+  padding-top: 31px;
+}
+
+.page-catalog__params {
+  @include reset-padding();
+  @include font-regular(13px, 30px);
+  display: block;
+  padding: 0 27px;
+  margin-bottom: 40px;
+}
+
+.page-catalog__price {
+  @include reset-padding();
+  @include font-bold(15px, 24px);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 27px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    width: 204px;
+    height: 1px;
+    background-color: #ececec;
+  }
+}
+
+.page-catalog__icon-cart {
+  fill: #cccccc;
+}
+
+@media(min-width: $tablet-width) {
+  .page-catalog__picture{
+    width: 334px;
+    height: 334px;
+  }
+}
+
+@media(min-width: $tablet-width) and (max-width: $desktop-width) {
+  .page-catalog__link {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-catalog__catalog-list {
+    grid-gap: 54px;
+    padding: 50px;
+  }
+
+  .page-catalog__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+  }
+
+  .page-catalog__price {
+    margin-top: auto;
+    margin-bottom: 25px;
+    padding-left: 30px;
+    padding-right: 31px;
+  }
+
+  .page-catalog__price::before{
+    width: 270px;
+  }
+
+}
+
+
+@media(min-width: $desktop-width) {
+  .page-catalog__catalog-list{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 51px;
+    padding: 50px 100px;
+  }
+
+  .page-catalog__wrapper {
+    width: 316px;
+    min-height: 196px;
+  }
+
+  .page-catalog__picture{
+    width: 315px;
+    height: 462px;
+  }
+}

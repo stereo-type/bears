@@ -1,0 +1,33 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
+.hits-list {
+    display: none;
+  }
+
+.hits-list__item a {
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+  @media(min-width: $desktop-width) {
+    .hits-list {
+      @include reset-padding();
+      @include font-bold(15px, 24px);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 316px;
+      list-style: none;
+    }
+    .hits-list__item {
+      padding-top: 18px;
+    }
+
+
+  }

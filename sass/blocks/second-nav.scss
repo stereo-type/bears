@@ -4,11 +4,19 @@
 .second-nav {
   position: relative;
   min-height: 489px;
-  border-top: 1px solid #ececec;
+  // border-top: 1px solid #ececec;
+  background-color: #f9f9f9;
+}
+
+.second-nav--inner {
+  min-height: 177px;
 }
 
 .second-nav__wrapper {
   display: none;
+  position: absolute;
+  top: -68px;
+  right: 0;
 }
 
 .second-nav__title {
@@ -16,22 +24,21 @@
   @include reset-padding();
   text-align: center;
   padding-top: 70px;
+  position: relative;
   z-index: 1;
-
-  // position: absolute;
-  // top: 70px;
-  // padding: 0 35px;
-  // word-wrap: normal;
-  // left: 50%;
-  // transform: translateX(-50%);
 }
 
 .second-nav__picture {
   @include reset-padding();
+  position: relative;
   width: 320px;
   height: 356px;
   margin-top: -160px;
   overflow: hidden;
+}
+
+.second-nav--inner .second-nav__picture{
+  display: none;
 }
 
 .second-nav__img {
@@ -40,12 +47,17 @@
   margin-left: -128px;
 }
 
+
 .second-nav__types-list {
   @include reset-list();
   position: relative;
   margin-top: -74px;
   min-height: 206px;
   z-index: 1;
+}
+
+.second-nav--inner .second-nav__types-list{
+  display: none;
 }
 
 .second-nav__types-item {
@@ -57,18 +69,179 @@
   color: #ffffff;
   background-color: $main-color;
   box-sizing: border-box;
+
   &::after {
     content: "";
     @include set-abs-size-tr(23px, 36px, 40px, 62px);
     background-image: url("/img/icon-interior.svg");
+    // opacity: 0.5;
   }
 }
 
 .second-nav__types-item--toy {
   background-color: #56c3b2;
+
   &::after {
     @include set-abs-size-tr(21px, 27px, 60px, 60px);
     background-image: url("/img/icon-toy.svg");
+    opacity: 0.5;
   }
 }
 
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .second-nav--inner {
+    min-height: 219px;
+    width: 768px;
+    margin-left: -50px;
+    margin-top: -59px;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+
+  .second-nav--inner .second-nav__note {
+    margin-top: 75px;
+    margin-right: 50px;
+  }
+
+  .second-nav__wrapper {
+    display: block;
+  }
+
+  .second-nav__note {
+    @include font-regular(15px, 24px);
+    position: relative;
+    z-index: 2;
+  }
+
+  .second-nav__title br:nth-child(1) {
+    display: none;
+  }
+
+  .second-nav__picture {
+    margin-left: -50px;
+    margin-top: -251px;
+    width: 768px;
+    height: 746px;
+  }
+
+  .second-nav__img {
+    @include reset-padding();
+    width: 100%;
+    height: 100%;
+  }
+
+  .second-nav__img img {
+    max-width: none;
+    margin-top: 8px;
+    margin-left: -190px;
+    width: 1150px;
+    height: 735px;
+
+    content: url("/img/hero-tablet@1x.jpg");
+  }
+
+  .second-nav__title {
+    @include font-bold(43px, 50px);
+    padding-top: 85px;
+  }
+
+  .second-nav__types-list {
+    display: flex;
+    margin-top: -120px;
+    padding-bottom: 0;
+    min-height: 103px;
+
+  }
+
+  .second-nav__types-item {
+    @include font-bold(20px, 30px);
+    min-height: 123px;
+    width: 334px;
+    padding-top: 28px;
+    padding-left: 33px;
+    color: #ffffff;
+    background-image: url("/img/bg-zigzag-fill.svg");
+    background-repeat: no-repeat;
+    background-position: -5px 100px;
+  }
+
+  .second-nav__types-item--stuff::after {
+    top: 30px;
+  }
+
+  .second-nav__types-item--toy::after {
+    top: 32px;
+    right: 33px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .second-nav--inner {
+    min-height: 244px;
+  }
+
+  .second-nav--inner .second-nav__title {
+    padding-bottom: 100px;
+  }
+
+  .second-nav__wrapper {
+    position: static;
+    padding: 0 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .second-nav__note {
+    @include reset-padding();
+    margin-top: 17px;
+  }
+
+  .second-nav__title {
+    @include font-bold(53px, 57px);
+    padding-top: 110px;
+    padding-left: 10px;
+  }
+
+  .second-nav__picture {
+    margin: 0 auto;
+    margin-top: -150px;
+    width: 1150px;
+    height: 600px;
+  }
+
+  .second-nav__img {
+
+    width: 1150px;
+    height: 746px;
+    margin-left: 0px;
+    margin-top: -40px;
+    content: url("/img/hero-desktop@1x.jpg");
+  }
+
+  .second-nav__img img {
+    margin-left: 0px;
+  }
+
+  .second-nav__types-list {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -89px;
+    width: 1050px;
+    min-height: 130px;
+  }
+
+  .second-nav__types-item {
+    width: 524px;
+    background-position: -5px 100px;
+    min-height: 130px;
+  }
+
+  .second-nav__types-item--toy {
+    width: 525px;
+  }
+
+}

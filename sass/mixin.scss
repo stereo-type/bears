@@ -20,6 +20,12 @@
   border: none;
 }
 
+@mixin reset-border() {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
 @mixin set-abs-size-tl ($top, $left, $width, $height) {
   position: absolute;
   top: $top;

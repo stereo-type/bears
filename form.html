@@ -5,233 +5,330 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Каталог товаров магазина «Мишка»</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Вязание на заказ</title>
   </head>
   <body>
+    <div class="container">
+      <header class="page-header header--inner">
 
-    <header class="page-header header">
+        <a href="index.html" class="page-header__logo">
+          <picture class="page-header__img">
+            <source media="(min-width: 1250px)"
+              srcset="../img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="/img/logo-tablet.svg">
+            <img src="../img/logo-mobile.svg" alt="Магазин вязаных игрушек
+              «Мишка»">
+          </picture>
+        </a>
 
-      <a href="index.htm" class="page-header__logo-link">
-        <img src="http://placehold.it/150x100"
-          width="149" height="79"
-          alt="Магазин вязанных игрушек «Мишка»">
-      </a>
-      <button class="page-header__logo-link"></button>
-      
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          Открыть меню
-        </button>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
 
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="main-nav__item">
-              <a href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="main-nav__item">
-              <a>Вязание на заказ</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#">Поиск по сайту</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#">Корзина: <span class="basket-fill">
-                  пока пуста</span></a>
-            </li>
-          </ul>
-          <button class="main-nav__close-button" type="button">
-            Закрыть</button>
-        </div>
-      </nav>
+          <button class="main-nav__toggle" type="button"><span
+              class="visually-hidden">
+              Открыть меню
+            </span>
+          </button>
 
-      <nav class="second-nav">
-
-        <div class="second-nav__wrapper">
-          <ul class="second-nav__list hits-list">
-            <li class="hits-list__item">
-              <a href="#">Новые поступления</a>
-            </li>
-            <li class="hits-list__item">
-              <a href="#">Распродажа</a>
-            </li>
-          </ul>
-          <p class="second-nav__note">Бесплатная доставка по России</p>
-          <h1 class="second-nav__title">
-            Вязание на заказ</h1>
-        </div>
-      </nav>
-    </header>
-
-    <main class="page-inner">
-      <section class="page-form">
-
-        <p class="page-form__text">Мы будем рады воплотить в жизнь ваши
-          пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы
-          уточнить детали.</p>
-        <form class="page-form__form" action="https://echo.htmlacademy.ru"
-          method="GET">
-
-          <fieldset class="page-form__fieldset fieldset fieldset--type">
-            <legend class="fieldset__legend">Тип</legend>
-            <ul class="fieldset__list">
-              <li class="fieldset__item">
-                <label for="fieldset__radio--accessory">
-                  <input class="fieldset__radio" name="fieldset__radio"
-                    id="fieldset__radio--accessory" type="radio" checked>Аксессуар
-                  для интерьера</label>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item">
+                <a href="catalog.html">
+                  Каталог товаров</a>
               </li>
-              <li class="fieldset__item">
-                <label for="fieldset__radio--toy">
-                  <input class="fieldset__radio" name="fieldset__radio"
-                    id="fieldset__radio--toy" type="radio">Детская игрушка</label>
+              <li class="site-list__item">
+                <a href="form.html">Вязание на заказ</a>
+              </li>
+              <li class="site-list__item site-list__item--search">
+                <a class="site-list__link site-list__link--search" href="#">
+                  <svg class="site-list__link-picture
+                    site-list__link-picture--basket" width="18" height="18"
+                    role="img">
+                    <use xlink:href="#icon-search">
+                    </use>
+                  </svg>
+                  Поиск по сайту</a>
+              </li>
+              <li class="site-list__item site-list__item--basket">
+                <a class="site-list__link site-list__link--basket" href="#">
+                  <svg class="site-list__link-picture
+                    site-list__link-picture--basket" width="21" height="18"
+                    role="img">
+                    <use xlink:href="#icon-cart">
+                    </use>
+                  </svg>
+                  Корзина: <span class="site-list__basket-fill">
+                    пока пуста</span></a>
               </li>
             </ul>
-          </fieldset>
+            <!-- <button class="main-nav__close-button" type="button">
+                        Закрыть</button> -->
+          </div>
+        </nav>
 
-          <fieldset class="page-form__fieldset fieldset fieldset--color">
-            <legend class="fieldset__legend">Цвет</legend>
-            <ul class="fieldset__list">
-              <li class="fieldset__item">
-                <label for="fieldset__checkbox--white">
-                  <input class="fieldset__checkbox" name="fieldset__checkbox"
-                    id="fieldset__checkbox--white" type="checkbox" checked>Белый</label>
+        <nav class="second-nav second-nav--inner">
+
+          <div class="second-nav__wrapper">
+            <ul class="second-nav__list hits-list">
+              <li class="hits-list__item">
+                <a href="#">Новые поступления</a>
               </li>
-              <li class="fieldset__item">
-                <label for="fieldset__checkbox--black">
-                  <input class="fieldset__radio" name="fieldset__checkbox"
-                    id="fieldset__checkbox--black" type="checkbox">Черный</label>
-              </li>
-              <li class="fieldset__item">
-                <label for="fieldset__checkbox--gray">
-                  <input class="fieldset__radio" name="fieldset__checkbox"
-                    id="fieldset__checkbox--gray" type="checkbox" checked>Серый</label>
-              </li>
-              <li class="fieldset__item">
-                <label for="fieldset__checkbox--pink">
-                  <input class="fieldset__radio" name="fieldset__checkbox"
-                    id="fieldset__checkbox--pink" type="checkbox">Розовый</label>
-              </li>
-              <li class="fieldset__item">
-                <label for="fieldset__checkbox--tiffany">
-                  <input class="fieldset__radio" name="fieldset__checkbox"
-                    id="fieldset__checkbox--tiffany" type="checkbox">«Тиффани»</label>
-              </li>
-              <li class="fieldset__item">
-                <label for="fieldset__checkbox--orange">
-                  <input class="fieldset__radio" name="fieldset__checkbox"
-                    id="fieldset__checkbox--orange" type="checkbox">Оранжевый</label>
+              <li class="hits-list__item">
+                <a href="#">Распродажа</a>
               </li>
             </ul>
-          </fieldset>
-
-          <fieldset class="page-form__fieldset fieldset fieldset--name">
-            <legend class="fieldset__legend">ФИО</legend>
-            <ul class="fieldset__list">
-              <li class="fieldset__item">
-                <label for="fieldset__input-text--name">Имя:
-                  <input class="fieldset__text" type="text"
-                    id="fieldset__input-text--name"
-                    name="fieldset__input-text--name"
-                    placeholder="Введите ваше имя*">
-                </label>
-              </li>
-              <li class="fieldset__item">
-                <label for="fieldset__input-text--familyname">Фамилия:
-                  <input class="fieldset__text" type="text"
-                    id="fieldset__input-text--familyname"
-                    name="fieldset__input-text--familyname"
-                    placeholder="Укажите фамилию*">
-                </label>
-              </li>
-              <li class="fieldset__item">
-                <label for="fieldset__input-text--surename">Отчество:
-                  <input class="fieldset__text" type="text"
-                    id="fieldset__input-text--surename"
-                    name="fieldset__input-text--surename"
-                    placeholder="Отчество, если желаете">
-                </label>
-              </li>
-
-            </ul>
-          </fieldset>
-
-          <div class="page-form__wrapper-contacts">
-            <fieldset class="page-form__fieldset fieldset fieldset--phone">
-              <legend class="fieldset__legend">Тел</legend>
-              <label class="visually-hidden" for="fieldset__input-text--phone">
-                Телефон
-                <input class="fieldset__text fieldset__text--contacts"
-                  id="fieldset__input-text--phone"
-                  name="fieldset__input-text--phone" type="text"
-                  placeholder="+7 ХХХ ХХ ХХ*">
-              </label>
-            </fieldset>
-
-            <fieldset class="page-form__fieldset fieldset fieldset--email">
-              <legend class="fieldset__legend">E-mail</legend>
-              <label class="visually-hidden" for="fieldset__input-text--email">
-                Телефон
-                <input class="fieldset__text fieldset__text--email"
-                  id="fieldset__input-text--email"
-                  name="fieldset__input-text--email" type="text"
-                  placeholder="Ваш Email*">
-              </label>
-            </fieldset>
+            <p class="second-nav__note">Бесплатная доставка по России</p>
           </div>
 
-          <fieldset class="page-form__fieldset fieldset fieldset--add">
-            <legend class="fieldset__legend">Доп</legend>
-            <label for="fieldset__textarea"></label>
-            <textarea name="fieldset__textarea" id="fieldset__textarea"
-              cols="72"
-              rows="8" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-          </fieldset>
+          <h1 class="second-nav__title">
+            Вязание на заказ</h1>
 
-          <button class="page-form_button button" type="submit">Отправить заказ</button>
-          <span class="page-form__additional-info"><sup>*</sup> Поля обязательны
-            для заполнения</span>
-        </form>
-      </section>
+        </nav>
+      </header>
 
-    </main>
 
-    <footer class="page-footer">
+      <main class="page-inner">
+        <section class="page-form">
 
-      <div class="page-footer__logo">
-        <p class="page-footer__logo-picture">
-          <a href="#">
-            <img src="http://placehold.it/150x100" alt="Логотип магазина"
-              width="102" height="34">
+          <p class="page-form__text">Мы будем рады воплотить в жизнь ваши
+            пожелания! Заполните простую форму заказа и мы свяжемся с вами,
+            чтобы
+            уточнить детали.</p>
+          <form class="page-form__form" action="https://echo.htmlacademy.ru"
+            method="GET">
+
+            <fieldset class="page-form__fieldset fieldset fieldset--type">
+              <legend class="fieldset__legend">Тип</legend>
+              <ul class="fieldset__list features__list--radio">
+                <li class="fieldset__item-radio">
+                  <label for="fieldset__radio--accessory">
+                    <input class="fieldset__radio visually-hidden"
+                      name="fieldset__radio" id="fieldset__radio--accessory"
+                      type="radio" checked="true">
+                    <span class="fieldset__radio-indicator"></span>
+                    Аксессуар для &nbsp<br> интерьера</label>
+                </li>
+                <li class="fieldset__item-radio">
+                  <label for="fieldset__radio--toy">
+                    <input class="fieldset__radio visually-hidden"
+                      name="fieldset__radio" id="fieldset__radio--toy"
+                      type="radio">
+                    <span class="fieldset__radio-indicator"></span>
+                    Детская игрушка</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="page-form__fieldset fieldset fieldset--color">
+              <legend class="fieldset__legend">Цвет</legend>
+              <ul class="fieldset__list fieldset__list--checkbox">
+                <li class="fieldset__item-checkbox">
+                  <label for="fieldset__checkbox--white">
+                    <input class="fieldset__checkbox visually-hidden"
+                      name="fieldset__checkbox"
+                      id="fieldset__checkbox--white" type="checkbox"
+                      checked="true">
+                    <span class="fieldset__checkbox-indicator"></span>
+                    Белый</label>
+                </li>
+                <li class="fieldset__item-checkbox">
+                  <label for="fieldset__checkbox--black">
+                    <input class="fieldset__checkbox visually-hidden"
+                      name="fieldset__checkbox"
+                      id="fieldset__checkbox--black" type="checkbox">
+                    <span
+                      class="fieldset__checkbox-indicator"></span>
+                    Черный</label>
+                </li>
+                <li class="fieldset__item-checkbox">
+                  <label for="fieldset__checkbox--gray">
+                    <input class="fieldset__checkbox visually-hidden"
+                      name="fieldset__checkbox"
+                      id="fieldset__checkbox--gray" type="checkbox"
+                      checked="true">
+                    <span class="fieldset__checkbox-indicator"></span>
+                    Серый</label>
+                </li>
+                <li class="fieldset__item-checkbox">
+                  <label for="fieldset__checkbox--pink">
+                    <input class="fieldset__checkbox visually-hidden"
+                      name="fieldset__checkbox"
+                      id="fieldset__checkbox--pink" type="checkbox">
+                    <span class="fieldset__checkbox-indicator"></span>
+                    Розовый</label>
+                </li>
+                <li class="fieldset__item-checkbox">
+                  <label for="fieldset__checkbox--tiffany">
+                    <input class="fieldset__checkbox visually-hidden"
+                      name="fieldset__checkbox"
+                      id="fieldset__checkbox--tiffany" type="checkbox">
+                    <span class="fieldset__checkbox-indicator"></span>
+                    «Тиффани»</label>
+                </li>
+                <li class="fieldset__item-checkbox">
+                  <label for="fieldset__checkbox--orange">
+                    <input class="fieldset__checkbox visually-hidden"
+                      name="fieldset__checkbox"
+                      id="fieldset__checkbox--orange" type="checkbox">
+                    <span class="fieldset__checkbox-indicator"></span>
+                    Оранжевый</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="page-form__fieldset fieldset fieldset--name">
+              <legend class="fieldset__legend">ФИО</legend>
+              <ul class="fieldset__list">
+                <li class="fieldset__item-input">
+                  <label for="fieldset__input-text fieldset__input-text--name">
+                    Имя: <br>
+                    <input class="fieldset__text" type="text"
+                      id="fieldset__input-text--name"
+                      name="fieldset__input-text--name"
+                      placeholder="Введите ваше имя*">
+                  </label>
+                </li>
+                <li class="fieldset__item-input">
+                  <label for="fieldset__input-text
+                    fieldset__input-text--familyname">Фамилия: <br>
+                    <input class="fieldset__text" type="text"
+                      id="fieldset__input-text--familyname"
+                      name="fieldset__input-text--familyname"
+                      placeholder="Укажите фамилию*">
+                  </label>
+                </li>
+                <li class="fieldset__item-input">
+                  <label for="fieldset__input-text
+                    fieldset__input-text--surename">Отчество: <br>
+                    <input class="fieldset__text" type="text"
+                      id="fieldset__input-text--surename"
+                      name="fieldset__input-text--surename"
+                      placeholder="Отчество, если желаете">
+                  </label>
+                </li>
+
+              </ul>
+            </fieldset>
+
+            <div class="page-form__wrapper-contacts">
+              <fieldset class="page-form__fieldset fieldset fieldset--phone">
+                <legend class="fieldset__legend">Тел</legend>
+                <label for="fieldset__input-text--phone">
+                  <input class="fieldset__text fieldset__text--contacts"
+                    id="fieldset__input-text--phone"
+                    name="fieldset__input-text--phone" type="tel"
+                    placeholder="+7 ХХХ ХХ ХХ*">
+                </label>
+              </fieldset>
+
+              <fieldset class="page-form__fieldset fieldset fieldset--email">
+                <legend class="fieldset__legend">E-mail</legend>
+                <label for="fieldset__input-text--email">
+                  <input class="fieldset__text fieldset__text--email"
+                    id="fieldset__input-text--email"
+                    name="fieldset__input-text--email" type="email"
+                    placeholder="Ваш Email*">
+                </label>
+              </fieldset>
+            </div>
+
+            <fieldset class="page-form__fieldset fieldset fieldset--add">
+              <legend class="fieldset__legend">Доп</legend>
+              <label for="fieldset__textarea"></label>
+              <textarea class="fieldset__textarea" name="fieldset__textarea"
+                id="fieldset__textarea"
+                cols="72" rows="8"
+                placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </fieldset>
+
+            <span class="page-form__additional-info"><sup>*</sup> Поля
+              обязательны
+              для заполнения</span>
+            <button class="page-form_button button" type="submit">Отправить
+              заказ</button>
+          </form>
+        </section>
+
+      </main>
+
+      <footer class="page-footer">
+
+        <div class="page-footer__logo">
+
+          <a>
+            <svg class="page-footer__logo-picture" width="102" height="34">
+              <use xlink:href="#logo-footer">
+              </use>
+            </svg>
+
           </a>
-        </p>
+
+        </div>
+
+        <div class="page-footer__socials social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--instagram"
+                href="https://www.instagram.com/" aria-label="Переход в
+                Инстаграм">
+                Мы в Инстаграме
+                <svg class="page-footer__picture
+                  page-footer__picture--instagram" width="21" height="21"
+                  role="img">
+                  <use xlink:href="#icon-insta">
+                  </use>
+                </svg></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook"
+                href="https://www.facebook.com/" aria-label="Переход на
+                Фейсбук">
+                Мы в Фейсбуке
+                <svg class="page-footer__picture page-footer__picture--facebook"
+                  width="15" height="27" role="img">
+                  <use xlink:href="#icon-fb">
+
+                  </use>
+                </svg></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--twitter"
+                href="https://twitter.com/" aria-label="Переход в Твиттер">
+                Мы в Твиттере
+                <svg class="page-footer__picture page-footer__picture--twitter"
+                  width="23" height="20" role="img">
+                  <use xlink:href="#icon-twitter">
+                  </use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="page-footer__copyright copyright">
+          <p class="copyright__text">
+            <a class="copyright__link" href="https://htmlacademy.ru/"
+              aria-label="Переход на сайт HTML Academy">HTML
+              Academy
+              <span class="copyright__span">Разработано</span>
+              <svg class="page-footer__picture page-footer__picture--copyright"
+                width="41" height="51" role="img">
+                <use xlink:href="#htmlacademy">
+                </use>
+              </svg>
+              <!-- <img class="copyright__picture" src="../img/htmlacademy.svg"
+                    width="27" height="34" alt="HTML Academy"> -->
+            </a>
+          </p>
+        </div>
+      </footer>
+      <div style="display: none">
+        <include src="build/img/sprite.svg">
+        </div>
       </div>
-
-      <div class="page-footer__socials social">
-        <ul class="social__list">
-          <li class="social_item">
-            <a class="social__link social__link--instagram"
-              href="https://www.instagram.com/">
-              Мы в Инстаграме</a>
-          </li>
-          <li class="social_item">
-            <a class="social__link social__link--facebook"
-              href="https://www.facebook.com/">
-              Мы в Фейсбуке</a>
-          </li>
-          <li class="social_item">
-            <a class="social__link social__link--twitter"
-              href="https://twitter.com/">
-              Мы в Твиттере</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a href="https://htmlacademy.ru/">HTML Academy</a>
-      </div>
-
-    </footer>
-
-  </body>
-</html>
+      <script src="/js/js.min.js">
+        </script>
+    </body>
+  </html>

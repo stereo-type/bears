@@ -1,0 +1,49 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
+.page-form {
+  @include font-regular(13px, 24px);
+  width: 320px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 45px;
+  box-sizing: border-box;
+}
+
+.page-form__text {
+  @include reset-padding();
+  @include font-regular(13px, 24px);
+  margin-bottom: 25px;
+}
+
+.page-form__fieldset {
+  @include reset-border();
+  @include reset-padding();
+  border-bottom: none;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+.page-form__additional-info {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.page-form_button {
+  margin-bottom: 55px;
+  padding-top: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .page-form {
+    @include reset-padding();
+    width: 100%;
+    margin-top: 80px;
+  }
+
+  .page-form__text {
+    @include font-regular(17px, 30px);
+    padding: 0 50px;
+    margin-bottom: 70px;
+  }
+}

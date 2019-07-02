@@ -45,6 +45,7 @@
 
 .contacts__picture {
   @include reset-padding();
+  position: relative;
   width: 320px;
   margin-bottom: 30px;
   overflow: hidden;
@@ -59,4 +60,121 @@
   margin: 0 auto;
   margin-bottom: 37px;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    padding: 0 15px;
+  }
+
+  .contacts__title {
+    @include font-bold(43px, 50px);
+    position: relative;
+    padding-top: 63px;
+    margin-bottom: 45px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 45px;
+      right: 38px;
+      width: 46px;
+      height: 81px;
+      background-image: url("/img/icon-flag.svg");
+    }
+  }
+
+
+  .contacts__table tbody {
+    width: 668px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+  }
+
+  .contacts__table tr {
+    width: 334px;
+  }
+
+  .contacts__param,
+  .contacts__value {
+    @include font-regular(17px, 30px);
+  }
+
+  .contacts__value--mail {
+    display: table-cell;
+  }
+
+  .contacts__picture {
+    content: url("/img/map-tablet@1x.jpg");
+    position: relative;
+    margin-left: -15px;
+    margin-bottom: 55px;
+    width: 768px;
+    height: 457px;
+    z-index: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 67px;
+      height: 100px;
+      background-image: url("/img/icon-map-pin.svg");
+      z-index: 1;
+    }
+  }
+
+  .contacts__write {
+    @include font-bold(17px, 20px);
+    width: 230px;
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    .contacts {
+      position: relative;
+    }
+
+    .contacts__title {
+      @include font-bold(53px, 57px);
+      margin-left: 223px;
+      padding-top: 143px;
+    }
+
+    .contacts__title::after {
+      top: 135px;
+      left: -75px;
+    }
+
+    .contacts__table {
+      width: 300px;
+      margin-bottom: 68px;
+    }
+
+    .contacts__table tbody {
+      display: table;
+      margin-left: 225px;
+      width: 320px;
+    }
+
+    .contacts__value--mail {
+      border: none;
+    }
+
+    .contacts__picture {
+      position: absolute;
+      top: 72px;
+      right: 100px;
+      width: 526px;
+      content: url("/img/map-desktop@1x.jpg");
+    }
+
+    .contacts__write {
+      margin-left: 260px;
+      margin-bottom: 105px;
+    }
+  }
 }

@@ -5,7 +5,7 @@
   @include reset-padding();
   padding: 0 30px;
   margin-bottom: 30px;
-  border-image: url("/img/bg-zigzag-line.svg") 0 25 96 25 stretch;
+  border-image: url("../img/bg-zigzag-line.svg") 0 25 96 25 stretch;
   border-style: solid;
   border-image-width: 6px;
 
@@ -69,4 +69,127 @@
 .features__button {
   margin-left: -1px;
   margin-bottom: 38px;
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    padding: 0 45px;
+    border-image-width: 18px;
+  }
+
+  .features__title {
+    @include font-bold(43px, 50px);
+    padding-top: 37px;
+    padding-bottom: 48px;
+    margin-bottom: 0;
+  }
+  
+  .features__wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 334px;
+  }
+  
+  .features__hit-mark {
+    @include font-bold(17px, 17px);
+    display: block;
+    position: absolute;
+    top: -89px;
+    right: -315px;
+    width: 80px;
+    color: $main-color;
+    text-align: center;
+  }
+  
+  .features__text {
+    @include font-regular(17px, 30px);
+    width: 283px;
+    margin-bottom: 35px;
+  }
+  
+  .features__list {
+    margin-bottom: 33px;
+  }
+  
+  .features__picture {
+    content: url("../img/triple-set-tablet@1x.jpg");
+    position: absolute;
+    top: 5px;
+    right: -335px;
+    width: 333px;
+    height: 404px;
+  }
+  
+  .features__price {
+    @include font-bold(20px, 24px);
+    margin-bottom: 8px;
+    width: 290px;
+  }
+  
+  .features__button {
+    width: 292px;
+    height: 50px;
+    margin-bottom: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    padding-top: 66px;
+    border-image-width: 24px;
+  }
+  
+  .features__title {
+    @include font-bold(53px, 57px);
+    position: relative;
+    padding-top: 41px;
+    padding-left: 223px;
+    margin-bottom: 0;
+    z-index: 1;
+  }
+  
+  .features__hit-mark {
+    left: 96px;
+    top: -92px;
+  }
+  
+  .features__wrapper{
+    padding-bottom: 22px;
+    padding: 0 50px;
+    width: 1050px;
+  }
+
+  .features__text {
+    padding-left: 176px;
+    margin-bottom: 51px;
+  }
+  
+  .features__list {
+    margin-left: 176px;
+    margin-bottom: 86px;
+    width: 290px;
+  }
+
+  .features__parametr {
+    margin-bottom: -1px;
+  }
+  
+  .features__picture {
+    content: url("../img/triple-set-desktop@1x.jpg");
+    right: 50px;
+    top: -158px;
+    width: 525px;
+    height: 636px;
+  }
+
+  .features__price {
+    margin-left: 177px;
+    margin-bottom: 10px;
+  }
+  
+  .features__button {
+    margin-left: 178px;
+    margin-bottom: 100px;
+  }
 }

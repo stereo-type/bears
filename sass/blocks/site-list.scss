@@ -14,20 +14,208 @@
   display: block;
   padding-left: 45px;
   padding-top: 25px;
+  &:hover:not(.site-list__link--basket):not(.site-list__link--search) {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.site-list__item--search::before,
-.site-list__item--basket::before {
-  content: "";
-  @include set-abs-size-tl(30px, 2px, 18px, 18px);
-  background-image: url("/img/icon-search.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+// .site-list__link--search::before,
+// .site-list__link--basket::before {
+//   content: "";
+//   @include set-abs-size-tl(30px, 2px, 18px, 18px);
+//   background-image: url("/img/icon-search.svg");
+//   background-repeat: no-repeat;
+//   background-position: 0 0;
+// }
+
+// .site-list__link--basket::before {
+//   width: 21px;
+//   left: 0;
+//   background-image: url("/img/icon-cart.svg")
+// }
+.site-list__link--search {
+  padding-left: 25px;
+}
+.site-list__link--basket {
+  padding-left: 22px;
 }
 
-.site-list__item--basket::before {
-  width: 21px;
-  left: 0;
-  background-image: url("/img/icon-cart.svg")
+.site-list__link.site-list__link--search,
+.site-list__link.site-list__link--basket {
+  display: flex;
+  align-items: center;
+  // margin-left: -32px;
 }
 
+.site-list__item .site-list__link--search,
+.site-list__item .site-list__link--basket {
+  padding-left: 0px;
+}
+
+.site-list__link-picture {
+  margin-right: 32px;
+}
+
+.site-list__link-picture {
+  fill: #d3d2d2;
+}
+
+.site-list__link:hover{
+  color: rgba($color: #000000, $alpha: 0.6);
+}
+.site-list__link:hover .site-list__link-picture {
+  fill: rgba($color: #63d1bb, $alpha: 1.0);
+}
+
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 10px;
+  }
+
+  .site-list__item {
+    @include reset-padding();
+    @include reset-border();
+    @include font-bold(15px, 24px);
+    position: relative;
+    height: 50px;
+    width: 167px;
+    order: 3;
+    z-index: 2;
+  }
+
+  .site-list__item:not(.site-list__item--basket):not(.site-list__item--search) {
+    padding-top: 8px;
+  }
+
+  .site-list__item a {
+    @include reset-padding();
+  }
+
+  .site-list__item--search {
+    @include reset-border();
+    padding-left: 30px;
+    position: absolute;
+    top: 0;
+    right: 316px;
+    width: 82px;
+    height: 89px;
+    font-size: 0;
+    border-right: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    box-sizing: border-box;
+    order: 1;
+  }
+
+  .site-list__item--basket {
+    @include font-bold(17px, 24px);
+    @include reset-border();
+    position: absolute;
+    padding-top: 2px;
+    top: 0;
+    right: 45px;
+    width: 280px;
+    height: 89px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ececec;
+    order: 2;
+  }
+
+  .site-list__item--search a {
+    padding-top: 33px;
+    padding-left: 33px;
+  }
+
+  .site-list__item--basket a {
+    width: 270px;
+    padding-top: 29px;
+    padding-left: 31px;
+  }
+
+  .site-list__basket-fill {
+    margin-left: 5px;
+  }
+
+  .site-list__link--search::before {
+    top: auto;
+    left: auto;
+  }
+
+  .site-list__link--basket::before {
+    top: 35px;
+    left: -18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    width: 1150px;
+    min-height: 89px;
+    padding-top: 0;
+  }
+
+  .site-list__item {
+    @include reset-border();
+    min-height: 89px;
+    width: 235px;
+    box-sizing: border-box;
+    order: unset;
+  }
+  
+  // .site-list__item:not(.site-list__item:nth-child(2)) {
+  //   border-right: 1px solid #e7e7e7;
+  // }
+
+  .site-list__item:not(.site-list__item--basket):not(.site-list__item--search) {
+    padding-top: 30px;
+    padding-left: 50px;
+  }
+
+  .site-list__item:nth-child(2) a {
+    margin-left: -15px;
+    margin-top: 1px;
+  }
+
+  .site-list__item:not(.site-list__item--search) {
+    @include font-bold(17px, 24px);
+  }
+
+  .site-list__item--search {
+    position: static;
+    margin-left: auto;
+    width: 84px;
+    min-height: 89px;
+    border: none;
+    border-left: 1px solid #e7e7e7;
+  }
+
+  .site-list__item--search a {
+    padding-top: 31px;
+  }
+  .site-list__item--basket {
+    @include reset-padding();
+    position: static;
+    width: 317px;
+    min-height: 89px;
+    border: none;
+    border-left: 1px solid #e7e7e7;
+  }
+
+  .site-list__item--basket a {
+    @include reset-padding();
+    padding-top: 31px;
+    padding-left: 82px;
+  }
+
+  .site-list__item .site-list__link--basket {
+    padding-left: 25px;
+  }
+  
+}
